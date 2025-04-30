@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #754ffe;
+    --gray-200: #e9edf4;
+    --text-muted: #64748b;
+    --hover-primary: #5a3ebd;
+
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.nav-link i {
+    font-size: 0.65rem;
+}
+
+.hero-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.hero-section h1 {
+    line-height: 1.2;
+    color: #1e293b;
+}
+
+.hero-section p {
+    color: var(--text-muted);
+}
+
+.hero-section .bi {
+    color: #f5a51e;
+}
+
+.hero-section input.form-control::placeholder {
+    color: #919cac;
+}
+
+.hero-section .col {
+    gap: 2rem;
+}
+
+.hero-section .container {
+    max-width: 1320px;
+}
+
+@media (min-width: 992px) {
+    .hero-section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-section .container {
+        max-width: 1320px;
+    }
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+.card.course-card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card.course-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.card h5 {
+    font-size: 1.125rem;
+}
+
+.card-header-meta {
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #593bdf;
+    border-color: #593bdf;
+}
+
+.btn-success {
+    background-color: #38a169;
+    border-color: #22c55e;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #16a34a;
+    border-color: #16a34a;
+}
+
+.btn-link-primary {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.btn-link-primary:hover {
+    color: #593bdf;
+    text-decoration: none;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-gray-200 {
+    background-color: var(--gray-200) !important;
+}
+
+.fw-semi-bold {
+    font-weight: 600 !important;
+}
+
+.ls-xl {
+    letter-spacing: 0.05em !important;
+}
+
+.fs-sm {
+    font-size: 0.875rem !important;
+}
+
+.fs-xs {
+    font-size: 0.75rem !important;
+}
+
+.lead {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.icon-shape {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-xxl {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+}
