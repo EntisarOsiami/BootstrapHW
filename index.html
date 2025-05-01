@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,6 +27,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
@@ -31,7 +36,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./img/fovicon.png" />
 
-    <title>Document</title>
+    <title>CSS-Bootstrap-HW</title>
   </head>
 
   <body>
@@ -47,18 +52,17 @@
           </a>
 
           <button
-            class="navbar-toggler"
+            class="navbar-toggler ms-auto d-lg-none"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNav"
+            aria-controls="mobileNav"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
             <ul class="navbar-nav me-2 mb-2 mb-lg-0 fw-bold">
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="#">
@@ -99,79 +103,165 @@
               />
             </form>
           </div>
-          <div class="d-flex">
+          <div class="d-none d-lg-flex align-items-center">
             <button
-              class="btn btn-light rounded-circle p-2 me-2 border border-0"
+              class="btn btn-light rounded-circle me-2 border border-0 d-flex align-items-center justify-content-center"
               style="width: 40px; height: 40px"
             >
               <i class="bi bi-sun-fill"></i>
             </button>
-            <a href="#" class="btn btn-outline-dark me-2 px-3">Sign In</a>
-            <a href="#" class="btn btn-primary px-3">Sign Up</a>
+
+            <a
+              href="#"
+              class="btn btn-outline-dark me-2 text-nowrap"
+              style="
+                height: 40px;
+                line-height: 40px;
+                padding: 0 1rem;
+                min-width: 100px;
+                text-align: center;
+              "
+            >
+              Sign In
+            </a>
+
+            <a
+              href="#"
+              class="btn btn-primary text-nowrap"
+              style="
+                height: 40px;
+                line-height: 40px;
+                padding: 0 1rem;
+                min-width: 100px;
+                text-align: center;
+              "
+            >
+              Sign Up
+            </a>
           </div>
         </div>
       </nav>
 
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav fw-bold mb-4">
+            <li class="nav-item"><a class="nav-link" href="#">Browse</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Landings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Accounts</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <button
+              class="btn btn-light rounded-circle border-0"
+              style="width: 40px; height: 40px"
+            >
+              <i class="bi bi-sun-fill"></i>
+            </button>
+            <span class="text-muted">Toggle Theme</span>
+          </div>
+          <a href="#" class="btn btn-outline-dark w-100 mb-2">Sign In</a>
+          <a href="#" class="btn btn-primary w-100">Sign Up</a>
+        </div>
+      </div>
+
       <main>
         <section class="hero-section py-10 py-lg-16">
-            <div class="container">
-              <div class="row align-items-center g-4">
-                <!-- Left Text Content -->
-                <div class="col-lg-6 text-center text-lg-start">
-                  <h1 class="fw-bold display-4 mb-3">
-                    Become a Vanilla JavaScript Developer
-                  </h1>
-                  <p class="text-muted fs-5 mb-4">
-                    In this tutorial, we are going to learn about JavaScript (Vanilla JS) – for building incredible, powerful JavaScript applications.
-                  </p>
-                  <ul class="list-unstyled fs-6 mb-4">
-                    <li class="mb-2"><i class="bi bi-clock text-warning me-2"></i>4 Hours</li>
-                    <li class="mb-2"><i class="bi bi-camera-video text-warning me-2"></i>12 Videos</li>
-                    <li class="mb-2"><i class="bi bi-people text-warning me-2"></i>10,234+ Enrolled</li>
-                  </ul>
-                  <a href="#" class="btn btn-success btn-lg">Watch Preview</a>
-                </div>
-          
-                <!-- Right Form Card -->
-                <div class="col-lg-6">
-                  <div class="card shadow border-0">
-                    <div class="card-body">
-                      <h3 class="fw-bold mb-4">Create Free Account</h3>
-                      <div class="d-flex flex-column flex-md-row gap-2 mb-3">
-                        <button class="btn btn-light w-100">
-                          <i class="bi bi-google text-danger me-1"></i> Google
-                        </button>
-                        <button class="btn btn-light w-100">
-                          <i class="bi bi-twitter text-info me-1"></i> Twitter
-                        </button>
-                        <button class="btn btn-light w-100">
-                          <i class="bi bi-facebook text-primary me-1"></i> Facebook
-                        </button>
-                      </div>
-                      <div class="text-center text-muted mb-3">OR</div>
-                      <form>
-                        <input type="email" class="form-control mb-3" placeholder="Email" />
-                        <input type="password" class="form-control mb-3" placeholder="Password" />
-                        <button type="submit" class="btn btn-primary w-100 fw-semibold">Start Courses for Free</button>
-                      </form>
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="fw-bold display-4 mb-3">
+                  Become a Vanilla JavaScript Developer
+                </h1>
+                <p class="text-muted fs-5 mb-4">
+                  In this tutorial, we are going to learn about JavaScript
+                  (Vanilla JS) – for building incredible, powerful JavaScript
+                  applications.
+                </p>
+                <ul class="list-unstyled fs-6 mb-4">
+                  <li class="mb-2">
+                    <i class="bi bi-clock text-warning me-2"></i>4 Hours
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-camera-video text-warning me-2"></i>12
+                    Videos
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-people text-warning me-2"></i>10,234+
+                    Enrolled
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-success btn-lg">Watch Preview</a>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="card shadow border-0">
+                  <div class="card-body">
+                    <h3 class="fw-bold mb-4">Create Free Account</h3>
+                    <div class="d-flex flex-column flex-md-row gap-2 mb-3">
+                      <button class="btn btn-light w-100">
+                        <i class="bi bi-google text-danger me-1"></i> Google
+                      </button>
+                      <button class="btn btn-light w-100">
+                        <i class="bi bi-twitter text-info me-1"></i> Twitter
+                      </button>
+                      <button class="btn btn-light w-100">
+                        <i class="bi bi-facebook text-primary me-1"></i>
+                        Facebook
+                      </button>
                     </div>
-                    <div class="card-footer bg-white text-center py-3 small text-muted">
-                      By continuing you accept the
-                      <a href="#" class="fw-semibold text-decoration-none">Terms of Use</a>,
-                      <a href="#" class="fw-semibold text-decoration-none">Privacy Policy</a>, and
-                      <a href="#" class="fw-semibold text-decoration-none">Data Policy</a>.
-                    </div>
+                    <div class="text-center text-muted mb-3">OR</div>
+                    <form>
+                      <input
+                        type="email"
+                        class="form-control mb-3"
+                        placeholder="Email"
+                      />
+                      <input
+                        type="password"
+                        class="form-control mb-3"
+                        placeholder="Password"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100 fw-semibold"
+                      >
+                        Start Courses for Free
+                      </button>
+                    </form>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-center py-3 small text-muted"
+                  >
+                    By continuing you accept the
+                    <a href="#" class="fw-semibold text-decoration-none"
+                      >Terms of Use</a
+                    >,
+                    <a href="#" class="fw-semibold text-decoration-none"
+                      >Privacy Policy</a
+                    >, and
+                    <a href="#" class="fw-semibold text-decoration-none"
+                      >Data Policy</a
+                    >.
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          
-        <section class="p-4">
+          </div>
+        </section>
+
+        <section class="py-8 py-lg-18 p-5 bg-light">
           <div class="container">
             <div class="row text-center text-lg-start justify-content-center">
               <div
-                class="col-md-3 col-6 mb-3 mb-md-0 d-flex align-items-center justify-content-center justify-content-lg-start"
+                class="col-md-3 col-6 mb-3 mb-md-0 d-flex justify-content-lg-start"
               >
                 <span class="badge-icon me-2">
                   <i class="bi bi-check-circle-fill text-warning"></i>
@@ -205,15 +295,15 @@
             </div>
           </div>
         </section>
-
         <section class="bg-gray-200 py-12 py-lg-18 p-4">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-8 text-center  mb-lg-0">
+              <div class="col-lg-8 text-center mb-lg-0">
                 <span
                   class="text-primary text-uppercase fw-semi-bold ls-xl mb-2 d-block"
-                  >Course Description</span
                 >
+                  Course Description
+                </span>
                 <h2 class="fw-bold display-5 mb-3">What will you learn?</h2>
                 <p class="lead">
                   Vanilla JS is a fast, lightweight, cross-platform framework
@@ -222,11 +312,11 @@
               </div>
             </div>
 
-            <div class="row g-4 p-5 m-5">
+            <div class="row g-4 px-2 px-md-4 py-4">
               <!-- Card 1 -->
-              <div class="col-lg-6">
-                <div class="card shadow-sm border-0">
-                  <div class="card-body p-4">
+              <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                  <div class="card-body p-4 d-flex flex-column">
                     <div class="d-flex mb-4">
                       <img
                         src="https://geeks-react.netlify.app/static/media/feature-icon-1.d81a3fc1e4004c4b67e31168c1898c64.svg"
@@ -252,7 +342,7 @@
                       ut interdum. Donec quis felis dignissim, luctus libero
                       ornare.
                     </p>
-                    <a href="#" class="btn-link-primary"
+                    <a href="#" class="btn-link-primary mt-auto"
                       >View Chapter Details +</a
                     >
                   </div>
@@ -260,9 +350,9 @@
               </div>
 
               <!-- Card 2 -->
-              <div class="col-lg-6">
-                <div class="card shadow-sm border-0">
-                  <div class="card-body p-4">
+              <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                  <div class="card-body p-4 d-flex flex-column">
                     <div class="d-flex mb-4">
                       <img
                         src="https://geeks-react.netlify.app/static/media/feature-icon-2.35b3b77394deb3cd7ebf78b8464fab62.svg"
@@ -284,7 +374,7 @@
                       Malesuada fames ac turpis egestas mpor tempus tincidunt.
                       Aliquam congue lacus ac tellus consectetur malesuada.
                     </p>
-                    <a href="#" class="btn-link-primary"
+                    <a href="#" class="btn-link-primary mt-auto"
                       >View Chapter Details +</a
                     >
                   </div>
@@ -292,9 +382,9 @@
               </div>
 
               <!-- Card 3 -->
-              <div class="col-lg-6">
-                <div class="card shadow-sm border-0">
-                  <div class="card-body p-4">
+              <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                  <div class="card-body p-4 d-flex flex-column">
                     <div class="d-flex mb-4">
                       <img
                         src="https://geeks-react.netlify.app/static/media/feature-icon-3.7cfb20a1964dfcd934da6b2267d68bc9.svg"
@@ -317,7 +407,7 @@
                       ornare turpis vequet elit nec, imperdiet lectuna liquam
                       qs.
                     </p>
-                    <a href="#" class="btn-link-primary"
+                    <a href="#" class="btn-link-primary mt-auto"
                       >View Chapter Details +</a
                     >
                   </div>
@@ -325,9 +415,9 @@
               </div>
 
               <!-- Card 4 -->
-              <div class="col-lg-6">
-                <div class="card shadow-sm border-0">
-                  <div class="card-body p-4">
+              <div class="col-12 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                  <div class="card-body p-4 d-flex flex-column">
                     <div class="d-flex mb-4">
                       <img
                         src="https://geeks-react.netlify.app/static/media/feature-icon-4.4e54d5c3aeac9d9d151971629ba18abf.svg"
@@ -349,7 +439,7 @@
                       In lobortis quam eu augue spendisse imperdiet nec orci
                       ipsum, tempus pharetra posuere imperdiet, lacinia a nisl.
                     </p>
-                    <a href="#" class="btn-link-primary"
+                    <a href="#" class="btn-link-primary mt-auto"
                       >View Chapter Details +</a
                     >
                   </div>
@@ -413,9 +503,6 @@
         </section>
       </main>
 
-
-
-      
       <footer class="pt-5 pt-lg-10">
         <div class="container">
           <div class="row">
@@ -431,19 +518,16 @@
                   UIKit for developers, built with a responsive framework.
                 </p>
                 <div class="fs-4 mt-4 d-flex gap-3">
-                    <a href="#" class="text-muted" style="font-size: 0.875rem;">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-muted" style="font-size: 0.875rem;">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-muted" style="font-size: 0.875rem;">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                  </div>
-                  
-                  
-                  
+                  <a href="#" class="text-muted" style="font-size: 0.875rem">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="text-muted" style="font-size: 0.875rem">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="text-muted" style="font-size: 0.875rem">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -476,10 +560,12 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="col-lg-3 col-md-12 ">
+            <div class="col-lg-3 col-md-12">
               <div class="mb-4">
                 <h3 class="fw-bold mb-3">Get in Touch</h3>
-                <p class="text-muted">339 McDermott Points Hettingerhaven, NV 15283</p>
+                <p class="text-muted">
+                  339 McDermott Points Hettingerhaven, NV 15283
+                </p>
                 <p class="mb-1">Email: <a href="#">support@geeksui.com</a></p>
                 <p>
                   Phone:
@@ -515,7 +601,9 @@
             >
               <nav class="nav nav-footer text-muted fs-6">
                 <a class="nav-link ps-0 text-dark" href="#">Privacy Policy</a>
-                <a class="nav-link px-2 px-md-3 text-dark" href="#">Cookie Notice</a>
+                <a class="nav-link px-2 px-md-3 text-dark" href="#"
+                  >Cookie Notice</a
+                >
                 <a class="nav-link d-none d-lg-block text-dark" href="#"
                   >Do Not Sell My Personal Information</a
                 >
